@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "nod": "^0.2.0",
+    "node": "^20.14.0",
+    "session": "^0.1.0",
+    "y": "^0.3.2"
+  },
+  "name": "privada",
+  "version": "1.0.0",
+  "description": "parte privada de la tienda de coches",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "privada",
+    "tienda",
+    "coches"
+  ],
+  "author": "AlejandroCortés",
+  "license": "ISC"
+}

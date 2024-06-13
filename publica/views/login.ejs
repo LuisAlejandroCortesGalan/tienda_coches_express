@@ -1,0 +1,32 @@
+<%- include('./templates/head.ejs') %>
+    <body>
+        <body class="centrar-patron centrar">
+            <div class="card ancho">
+                <div class="card-body">
+                  <h5 class="card-title text-center negrita">Ingresa en tu cuenta</h5>
+                  <p>¡Introduce tus datos y accede tu cuenta!</p>
+                  <form class="espacio" action="/login" method="post">
+                    <div class="form-group">
+                      <label for="email" class="ocultar">Correo Electrónico</label>
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="ocultar">Contraseña</label>
+                      <input type="password" name="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <% if (typeof mensaje !== 'undefined' && mensaje) { %>
+                      <div class="alert alert-info" role="alert">
+                        <%= mensaje %>
+                      </div>
+                      <% } %>
+                    <p>¿Aún no tienes una cuenta? <a href="/register">Registrate!</a></p>
+                    <p>¿Olvidaste tu contraseña? <a href="/recuperar">Recuperar contraseña!</a></p>
+
+                    <button type="submit" class="btn btn-primary negrita fuente">Acceder</button>
+                  </form>
+                </div>
+                </div>
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<%- include('./templates/head.ejs') %>
+    <body class="centrar-patron centrar">
+        <div class="card ancho">
+            <div class="card-body">
+              <h5 class="card-title text-center negrita">Crea tu cuenta</h5>
+              <p>¡Introduce tus datos y crea tu cuenta!</p>
+              <form class="espacio" method="post" action="/register">
+                <div class="form-group">
+                  <label for="nombre" class="ocultar">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="apellido" class="ocultar">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                </div>
+                <div class="form-group">
+                  <label for="dni" class="ocultar">DNI</label>
+                  <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingresa tu DNI" required>
+                </div>
+                <div class="form-group">
+                  <label for="tel" class="ocultar">Teléfono</label>
+                  <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingresa tu teléfono" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="ocultar">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                  <label for="poblacio" class="ocultar">Población</label>
+                  <input type="text" class="form-control" id="poblacio" name="poblacio" placeholder="Ingresa tu población" required>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="ocultar">Contraseña</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <p>¿Ya tienes una cuenta? <a href="/login">Ingresa!</a></p>
+                <button type="submit" class="btn btn-primary btn-block negrita">Registrarse</button>
+              </form>
+
+            </div>
+            </div>
+</body>
+</html>

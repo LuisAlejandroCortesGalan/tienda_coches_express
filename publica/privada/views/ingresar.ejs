@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!-- Estilos de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center flex-column"
+    >
+      <h2 class="mt-4">Formulario para <span>Ingresar Datos</span></h2>
+      <form action="/ingresar" method="post" class="row col-md-6">
+        <div class="mb-3">
+          <label for="nombre_modelo" class="form-label"
+            >Nombre del Modelo:</label
+          >
+          <input
+            type="text"
+            id="nombre_modelo"
+            name="nombre_modelo"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="unidades_totales" class="form-label"
+            >Unidades Totales:</label
+          >
+          <input
+            type="number"
+            id="unidades_totales"
+            name="unidades_totales"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="hidden"
+            id="unidades_alquiladas"
+            name="unidades_alquiladas"
+            value="0"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="personas" class="form-label">Personas:</label>
+          <input
+            type="number"
+            id="personas"
+            name="personas"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="puertas" class="form-label">Puertas:</label>
+          <input
+            type="number"
+            id="puertas"
+            name="puertas"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="cambio" class="form-label">Cambio:</label>
+          <input type="text" id="cambio" name="cambio" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="maletas" class="form-label">Maletas:</label>
+          <input
+            type="number"
+            id="maletas"
+            name="maletas"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="tipo" class="form-label">Tipo:</label>
+          <input type="text" id="tipo" name="tipo" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="precioDia" class="form-label">Precio por Día:</label>
+          <input
+            type="number"
+            id="precioDia"
+            name="precioDia"
+            class="form-control"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar Datos</button>
+      </form>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

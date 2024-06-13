@@ -1,0 +1,7 @@
+./tienda/html.
+
+/
+/index.ejs
+
+/:tipo
+/tipo.ejs

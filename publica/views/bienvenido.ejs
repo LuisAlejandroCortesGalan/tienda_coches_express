@@ -1,0 +1,31 @@
+<%- include('./templates/head.ejs') %>
+<body>  
+    <script>
+        // Go back two pages in the browser history after 5 seconds
+        setTimeout(() => {
+          history.go(-2);
+        }, 3000); // 5000 milliseconds = 5 seconds
+      </script>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="mb-4">¡Bienvenido!</h1>
+                <% result.forEach(function(cliente) { %>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p><strong>Nombre:</strong> <%= cliente.nombre %></p>
+                            <p><strong>Apellido:</strong> <%= cliente.apellido %></p>
+                            <p><strong>DNI:</strong> <%= cliente.dni %></p>
+                            <p><strong>Teléfono:</strong> <%= cliente.tel %></p>
+                            <p><strong>Email:</strong> <%= cliente.email %></p>
+                            <p><strong>Población:</strong> <%= cliente.poblacio %></p>
+                        </div>
+                    </div>
+                <% }); %>
+                <p>Serás redigirido en 3 segundos, sino tambien puedes: </p>
+                <a href="/" class="btn btn-primary mt-3">Volver al inicio / Ir a reservas</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

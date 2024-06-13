@@ -1,0 +1,63 @@
+<%- include('./templates/head.ejs') %>
+    <body>
+      <main class="centro centrar-reserva">
+        <div class="card ancho alto">
+          <div class="card-body">
+            <h5 class="card-title text-center fuente">Reservar</h5>
+            <form action="/reservar:id" method="POST">
+              <div class="form-group">
+                <label for="fecha_recogida" class="font-weight-bold">Fecha de recogida:</label>
+                <input type="date" class="form-control" id="fecha_recogida" name="fecha_recogida" required>
+              </div>
+              <div class="form-group">
+                <label for="fecha_entrega" class="font-weight-bold">Fecha de entrega:</label>
+                <input type="date" class="form-control" id="fecha_entrega" name="fecha_entrega" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block font-weight-bold negrita" >Reservar</button>
+              <a href="/" class="quitar-decoracion btn btn-dark">Volver al inicio</a>
+            </form>
+          </div>
+        </div>
+        <div>
+          <% if (data1 && data1.length> 0) { %>
+              <% data1.forEach(function(modelo) { %>
+                  <a href="http://localhost:3000/<%= modelo.tipo %>/<%= modelo.nombre_modelo %>"  class="quitar">
+                  <div class="card card-reserva">
+                      <h2>
+                          <%= modelo.nombre_modelo %>
+                      </h2>
+                      <p>Unidades Totales: <%= modelo.unidades_totales %>
+                      </p>
+                      <p>Unidades Alquiladas: <%= modelo.unidades_alquiladas %>
+                      </p>
+                      <p>Personas: <%= modelo.personas %>
+                      </p>
+                      <p>Puertas: <%= modelo.puertas %>
+                      </p>
+                      <p>Cambio: <%= modelo.cambio %>
+                      </p>
+                      <p>Maletas: <%= modelo.maletas %>
+                      </p>
+                      <p>Precio por Día: $<%= modelo.precioDia %>
+                      </p>
+                      <div>
+                          <img src="../img/<%= modelo.nombre_modelo %>.webp"
+                              alt="imagen de <%= modelo.nombre_modelo %>">
+                              <hr>
+                              <p class="text-center"><%= modelo.tipo %></p>
+                      </div>
+                  </div>
+              </a>
+                  <% }); %>
+                      <% } else { %>
+                          <p>No hay modelos disponibles para este tipo.</p>
+                          <% } %>
+      </div>
+      </main>
+    
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
